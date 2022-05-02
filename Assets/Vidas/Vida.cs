@@ -38,6 +38,7 @@ public class Vida : MonoBehaviour
 
             if(MAnzanas.manzanas != null){
                 MAnzanas.manzanas.reducirManzana();
+                vidas -= 1;
             }        
 
             if(vidas <=0){
