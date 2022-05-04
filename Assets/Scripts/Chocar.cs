@@ -6,12 +6,11 @@ public class Chocar : MonoBehaviour
 {
 
 
-    void OnCollisionEnter(Collision collisionInfo)
+    void Update()
     {
-        Collider col = collisionInfo.collider;
-
-        if (col.CompareTag("Player") ){
-            //Debug.Log("dale");
+        Rigidbody rb = gameObject.GetComponent("Rigidbody") as Rigidbody;
+        if (rb.IsSleeping()) {
+            rb.WakeUp();
         }
     }
 }

@@ -28,7 +28,6 @@ public class Vida : MonoBehaviour
     {
         Collider col = collisionInfo.collider;
 
-        Debug.Log("ala");
         if (!canDamage)
         {
             return;
