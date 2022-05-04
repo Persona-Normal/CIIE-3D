@@ -6,11 +6,12 @@ public class Chocar : MonoBehaviour
 {
 
 
-    void OnCollisionEnter(Collision col)
-    {                
-        if(col.gameObject.tag == "Player" ){
-            Debug.Log("dale");
-            Destroy(gameObject,.5f);
-            }
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        Collider col = collisionInfo.collider;
+
+        if (col.CompareTag("Player") ){
+            //Debug.Log("dale");
+        }
     }
 }

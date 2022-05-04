@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8b198f69154654a9030e7e0247c79c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaPublica: 0
+  vidas: 3
   canDamage: 1
 --- !u!4 &20309190 stripped
 Transform:
@@ -430,6 +430,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1469334161}
+  - {fileID: 530150673}
   - {fileID: 782671233}
   - {fileID: 885420152}
   - {fileID: 1426414216}
@@ -443,7 +444,6 @@ Transform:
   - {fileID: 1591736752}
   - {fileID: 1255113317}
   - {fileID: 149069921}
-  - {fileID: 530150673}
   - {fileID: 333228016}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -642,11 +642,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530150672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.64, y: 3.29, z: 0}
+  m_LocalPosition: {x: 1.64, y: 3.29, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 296535297}
-  m_RootOrder: 14
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &530150674
 BoxCollider:
@@ -656,7 +656,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530150672}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -737,7 +737,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!1 &559090660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,8 +2559,8 @@ GameObject:
   - component: {fileID: 2084068718}
   - component: {fileID: 2084068717}
   m_Layer: 0
-  m_Name: Terrain
-  m_TagString: Untagged
+  m_Name: AcidTerrain
+  m_TagString: EnvironmentalHazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2589,7 +2589,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 309cbfe816320ce43a5cf3825afe214b, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &2084068718
 Terrain:
   m_ObjectHideFlags: 0
@@ -2614,7 +2614,7 @@ Terrain:
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: ab735db22ef658e49b470e8a6f10e668, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1

@@ -22,7 +22,7 @@ public class MAnzanas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("update");
+        //Debug.Log("update");
     }
 
     //para reducir las manzanas por orden 
