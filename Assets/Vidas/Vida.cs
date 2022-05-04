@@ -24,13 +24,16 @@ public class Vida : MonoBehaviour
         Debug.Log("update");
     }
 
+
+    // Para los enemigos debería ser Collide, no Trigger
     public void OnTriggerEnter(Collider col){
 
         Debug.Log("ala");
         if(!canDamage){
             return;
         }
-        if(col.CompareTag("Enemy")){
+        if(col.CompareTag("Enemy") || col.CompareTag("EnvironmentalHazard"))
+        {
             //no nos puede hacer daño hasta dentro de 1 seg
             canDamage = false;
             Invoke("ActivarDano",1);            
