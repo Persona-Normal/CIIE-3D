@@ -13,4 +13,9 @@ public class Chocar : MonoBehaviour
             rb.WakeUp();
         }
     }
+
+    public void OnCollisionEnter(Collision collisionInfo)
+    {
+        Debug.Log("a");
+    }
 }

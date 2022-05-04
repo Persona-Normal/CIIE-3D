@@ -24,7 +24,7 @@ public class Vida : MonoBehaviour
 
 
     
-    public void OnCollisionStay(Collision collisionInfo)
+    public void OnCollisionEnter(Collision collisionInfo)
     {
         Collider col = collisionInfo.collider;
 
