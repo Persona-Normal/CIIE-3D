@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour
 {
-    public static int vidas= 3;
-    public int vidaPublica; 
+    public int vidas= 3;
     //para que no se haga mucho daño de un solo golpe        
     public bool canDamage = true;
 
@@ -20,19 +19,51 @@ public class Vida : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vidaPublica = vidas;
         Debug.Log("update");
     }
 
 
-    // Para los enemigos debería ser Collide, no Trigger
-    public void OnTriggerEnter(Collider col){
+    
+    public void OnCollisionStay(Collision collisionInfo)
+    {
+        Collider col = collisionInfo.collider;
+
+        Debug.Log("ala");
+        if (!canDamage)
+        {
+            return;
+        }
+
+        if (col.CompareTag("Enemy"))
+        {
+            //no nos puede hacer daño hasta dentro de 1 seg
+            canDamage = false;
+            Invoke("ActivarDano", 1);
+
+            Debug.Log("hit");
+
+            if (MAnzanas.manzanas != null)
+            {
+                MAnzanas.manzanas.reducirManzana();
+                vidas -= 1;
+            }
+
+            if (vidas <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+    }
+
+    
+    public void OnTriggerStay(Collider col){
 
         Debug.Log("ala");
         if(!canDamage){
             return;
         }
-        if(col.CompareTag("Enemy") || col.CompareTag("EnvironmentalHazard"))
+
+        if(col.CompareTag("EnvironmentalHazard"))
         {
             //no nos puede hacer daño hasta dentro de 1 seg
             canDamage = false;
