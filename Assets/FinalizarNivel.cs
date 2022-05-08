@@ -30,8 +30,10 @@ public class FinalizarNivel : MonoBehaviour
             { // Aún quedan niveles, transicionar al siguiente
                 SceneManager.LoadScene(nextScene);
             }
-            else { 
-              // Estábamos en el último nivel, terminar el juego (pensar como)
+            else {
+                // Estábamos en el último nivel, terminar el juego (pensar como)
+                // Volvemos al primer nivel como comportamiento provisional
+                SceneManager.LoadScene(0);
             }
         }
         
