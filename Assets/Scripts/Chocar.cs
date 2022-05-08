@@ -6,7 +6,7 @@ public class Chocar : MonoBehaviour
 {
 
 
-    void Update()
+    void FixedUpdate()
     {
         Rigidbody rb = gameObject.GetComponent("Rigidbody") as Rigidbody;
         if (rb.IsSleeping()) {
