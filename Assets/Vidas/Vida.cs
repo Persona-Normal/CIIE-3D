@@ -19,7 +19,10 @@ public class Vida : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("update");
+        if (vidas <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
 
@@ -47,10 +50,9 @@ public class Vida : MonoBehaviour
                 vidas -= 1;
             }
 
-            if (vidas <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+        }
+        else if (col.CompareTag("HazardousTerrain")) { // Los terrenos peligrosos causan muerte instantánea
+            vidas = 0;
         }
     }
 
@@ -75,9 +77,7 @@ public class Vida : MonoBehaviour
                 vidas -= 1;
             }        
 
-            if(vidas <=0){
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            
         }
     }
 
