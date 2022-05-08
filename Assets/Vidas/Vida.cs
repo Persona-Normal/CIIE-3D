@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour
 {
-    public int vidas= 3;
+    int vidas= 3;
     //para que no se haga mucho daño de un solo golpe        
-    public bool canDamage = true;
+    bool canDamage = true;
 
 
     // Start is called before the first frame update
