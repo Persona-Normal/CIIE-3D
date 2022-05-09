@@ -31,9 +31,8 @@ public class FinalizarNivel : MonoBehaviour
                 SceneManager.LoadScene(nextScene);
             }
             else {
-                // Estábamos en el último nivel, terminar el juego (pensar como)
-                // Volvemos al primer nivel como comportamiento provisional
-                SceneManager.LoadScene(0);
+                // Estábamos en el último nivel, terminar el juego, volvemos al menú inicial
+                SceneManager.LoadScene("StartMenu");
             }
         }
         
