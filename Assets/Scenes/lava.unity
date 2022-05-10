@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -70.13623
       objectReference: {fileID: 0}
+    - target: {fileID: 4003447337345831396, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1030.1125
+      objectReference: {fileID: 0}
     - target: {fileID: 5453772188465271052, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_Name
       value: PlayerCameraContainer
@@ -148,7 +152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453772188465271055, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.407891
+      value: 9.345
       objectReference: {fileID: 0}
     - target: {fileID: 5453772188465271055, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -185,6 +189,10 @@ PrefabInstance:
     - target: {fileID: 6274314033976576179, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -70.13623
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274314033976576179, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1030.1125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
@@ -292,7 +300,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.5764706, g: 0.14134613, b: 0.0352941, a: 1}
+  m_Color: {r: 0.9056604, g: 0.38575488, b: 0.029903898, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
