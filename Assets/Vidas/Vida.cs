@@ -25,37 +25,6 @@ public class Vida : MonoBehaviour
         }
     }
 
-
-    
-    public void OnCollisionEnter(Collision collisionInfo)
-    {
-        Collider col = collisionInfo.collider;
-
-        if (!canDamage)
-        {
-            return;
-        }
-
-        if (col.CompareTag("Enemy"))
-        {
-            //no nos puede hacer daño hasta dentro de 1 seg
-            canDamage = false;
-            Invoke("ActivarDano", 1);
-
-            Debug.Log("hit");
-
-            if (MAnzanas.manzanas != null)
-            {
-                MAnzanas.manzanas.reducirManzana();
-                vidas -= 1;
-            }
-
-        }
-        else if (col.CompareTag("HazardousTerrain")) { // Los terrenos peligrosos causan muerte instantánea
-            vidas = 0;
-        }
-    }
-
     
     public void OnTriggerStay(Collider col){
 
