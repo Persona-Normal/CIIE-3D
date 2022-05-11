@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EnvironmentalHazard
   - HazardousTerrain
+  - Ground
   layers:
   - Default
   - TransparentFX
