@@ -25,10 +25,17 @@ public class Vida : MonoBehaviour
         }
     }
 
+    public void OnTriggerEnter(Collider col) {
+
+        if (col.CompareTag("HazardousTerrain"))
+        {
+            vidas = 0;
+        }
+
+    }
     
     public void OnTriggerStay(Collider col){
 
-        Debug.Log("ala");
         if(!canDamage){
             return;
         }
@@ -48,6 +55,7 @@ public class Vida : MonoBehaviour
 
             
         }
+        
     }
 
     void ActivarDano(){
