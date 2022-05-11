@@ -2204,6 +2204,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1874567746171317438, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
+      propertyPath: canPush
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874567746171317438, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
+      propertyPath: strength
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3913804154092088828, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
+      propertyPath: m_ShowCameraFrustum
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5453772188465271052, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_Name
       value: PlayerCameraContainer
