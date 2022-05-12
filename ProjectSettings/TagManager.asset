@@ -9,7 +9,6 @@ TagManager:
   - EnvironmentalHazard
   - HazardousTerrain
   - Ground
-  - TerrainTrigger
   layers:
   - Default
   - TransparentFX
@@ -19,7 +18,7 @@ TagManager:
   - UI
   - player
   - obstaculo
-  - 
+  - ground
   - 
   - 
   - 
