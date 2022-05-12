@@ -2015,6 +2015,7 @@ GameObject:
   - component: {fileID: 8620026266584318150}
   - component: {fileID: 1297661476904495739}
   - component: {fileID: 9120174023162338615}
+  - component: {fileID: 1237517953}
   m_Layer: 0
   m_Name: lava_monster
   m_TagString: Enemy
@@ -2076,9 +2077,38 @@ MonoBehaviour:
   ani: {fileID: 0}
   angulo: {x: 0, y: 0, z: 0, w: 0}
   grado: 0
+  ground:
+    serializedVersion: 2
+    m_Bits: 0
   target: {fileID: 0}
   atacando: 0
   rango: {fileID: 9120174024599662783}
+  vision: {fileID: 0}
+  cuboCollider: {fileID: 0}
+--- !u!114 &1237517953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7796429913310871185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2539a60873cf644b1a442cb4e26302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 10
+  angle: 30
+  height: 1
+  meshColor: {r: 1, g: 0, b: 0, a: 1}
+  scanFrequency: 30
+  layers:
+    serializedVersion: 2
+    m_Bits: 0
+  occlusionLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  Objects: []
 --- !u!1 &7825607298984834882
 GameObject:
   m_ObjectHideFlags: 0

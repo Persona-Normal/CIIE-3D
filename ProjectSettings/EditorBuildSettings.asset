@@ -18,6 +18,6 @@ EditorBuildSettings:
     path: Assets/Scenes/lava.unity
     guid: 1119c2599cc49074f8b75db02ea290be
   - enabled: 1
-    path: Assets/forest.unity
+    path: Assets/Scenes/forest.unity
     guid: 855d827a479992747b576189370630cf
   m_configObjects: {}
