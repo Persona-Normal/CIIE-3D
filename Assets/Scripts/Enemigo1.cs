@@ -13,10 +13,12 @@ public class Enemigo1 : MonoBehaviour
     public GameObject target;
     public bool atacando;
     public RangoEnemigo rango;
+    public IaSensor vision;
 
     // Start is called before the first frame update
     void Start()
     {
+        vision = GetComponent<IaSensor>();
         ani = GetComponent<Animator>();
         target = GameObject.Find("PlayerArmature");
     }
@@ -24,7 +26,9 @@ public class Enemigo1 : MonoBehaviour
 
     public void Comportamiento_Enemigo()
     {
-        if (Vector3.Distance(transform.position, target.transform.position) > 5)
+        if (vision.IsInSight(target) == true)
+            Debug.Log("FUNCIONO");
+        if (Vector3.Distance(transform.position, target.transform.position) > 5 && !vision.IsInSight(target))
         {
             ani.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
@@ -55,7 +59,7 @@ public class Enemigo1 : MonoBehaviour
             var lookPos = target.transform.position - transform.position;
             lookPos.y = 0;
             var rotation = Quaternion.LookRotation(lookPos);
-            if ((Vector3.Distance(transform.position, target.transform.position) > 1 )&& !atacando)
+            if (((Vector3.Distance(transform.position, target.transform.position) > 1 )|| (vision.IsInSight(target))) && !atacando)
             {
                 
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
