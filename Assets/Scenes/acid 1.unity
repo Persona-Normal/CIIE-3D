@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21004617
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 21004620}
+  - component: {fileID: 21004619}
+  m_Layer: 0
+  m_Name: Roomba
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &21004619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21004617}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1.052286, z: 0.1748352}
+  m_Center: {x: 0, y: -0.07941204, z: 0.07661438}
+--- !u!4 &21004620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21004617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.463}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2131121288}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &22608778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1118,10 @@ PrefabInstance:
       value: big_floor
       objectReference: {fileID: 0}
     - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
@@ -1086,6 +1134,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_LocalScale.z
       value: 15
       objectReference: {fileID: 0}
@@ -1095,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1127,6 +1179,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567902, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6567902, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2047,7 +2107,7 @@ GameObject:
   - component: {fileID: 2084068716}
   - component: {fileID: 2084068718}
   - component: {fileID: 2084068717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AcidTerrain
   m_TagString: HazardousTerrain
   m_Icon: {fileID: 0}
@@ -2133,8 +2193,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5974356375980112807, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974356375980112807, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 5974356375980112807, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2173,9 +2237,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6618053652235937366, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
+      propertyPath: roomba
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618053652235937366, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
       propertyPath: vision
       value: 
       objectReference: {fileID: 2131121285}
+    - target: {fileID: 6618053652235937366, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
+      propertyPath: cuboCollider
+      value: 
+      objectReference: {fileID: 21004619}
+    - target: {fileID: 6618053652235937366, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
+      propertyPath: ground.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
 --- !u!1 &2131121284 stripped
@@ -2207,6 +2283,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   Objects: []
+--- !u!4 &2131121288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5974356375980112807, guid: 8614dcf3a7ab6944785cbb13231aa687, type: 3}
+  m_PrefabInstance: {fileID: 2131121283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2136528373
 PrefabInstance:
   m_ObjectHideFlags: 0
