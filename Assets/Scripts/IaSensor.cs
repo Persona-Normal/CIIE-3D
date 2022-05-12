@@ -41,7 +41,7 @@ public class IaSensor : MonoBehaviour
     public void Scan()
     {
         count = Physics.OverlapSphereNonAlloc(transform.position, distance, colliders, layers, QueryTriggerInteraction.Collide);
-        Debug.Log(count);
+        //Debug.Log(count);
         Objects.Clear();
         for (int i = 0; i < count; i++)
         {

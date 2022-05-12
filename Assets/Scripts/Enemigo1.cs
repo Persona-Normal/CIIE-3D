@@ -9,11 +9,13 @@ public class Enemigo1 : MonoBehaviour
     public Animator ani;
     public Quaternion angulo;
     public float grado;
+    public LayerMask ground;
 
     public GameObject target;
     public bool atacando;
     public RangoEnemigo rango;
     public IaSensor vision;
+    public Collider cuboCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -26,8 +28,20 @@ public class Enemigo1 : MonoBehaviour
 
     public void Comportamiento_Enemigo()
     {
-        if (vision.IsInSight(target) == true)
-            Debug.Log("FUNCIONO");
+        Vector3 pos1 = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Vector3 pos2 = new Vector3(transform.position.x, transform.position.y-5, transform.position.z);
+
+        if (Physics.Linecast(pos1, pos2, ground)){
+            Debug.Log("aaah prro, asi si");
+        }
+
+        //probablemente borrar
+        if (cuboCollider.CompareTag("Ground"))
+        {
+            Debug.Log("hay suelo lel");
+
+        }
+        
         if (Vector3.Distance(transform.position, target.transform.position) > 5 && !vision.IsInSight(target))
         {
             ani.SetBool("run", false);
