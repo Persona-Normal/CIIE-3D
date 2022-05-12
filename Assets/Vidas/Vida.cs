@@ -27,7 +27,7 @@ public class Vida : MonoBehaviour
 
     public void OnTriggerEnter(Collider col) {
 
-        if (col.CompareTag("HazardousTerrain"))
+        if (col.CompareTag("TerrainTrigger"))
         {
             vidas = 0;
         }

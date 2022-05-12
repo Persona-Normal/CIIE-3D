@@ -9,6 +9,7 @@ TagManager:
   - EnvironmentalHazard
   - HazardousTerrain
   - Ground
+  - TerrainTrigger
   layers:
   - Default
   - TransparentFX
