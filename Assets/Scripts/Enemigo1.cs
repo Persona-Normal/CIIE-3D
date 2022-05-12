@@ -15,7 +15,6 @@ public class Enemigo1 : MonoBehaviour
     public bool atacando;
     public RangoEnemigo rango;
     public IaSensor vision;
-    public Collider cuboCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -35,12 +34,6 @@ public class Enemigo1 : MonoBehaviour
             Debug.Log("aaah prro, asi si");
         }
 
-        //probablemente borrar
-        if (cuboCollider.CompareTag("Ground"))
-        {
-            Debug.Log("hay suelo lel");
-
-        }
         
         if (Vector3.Distance(transform.position, target.transform.position) > 5 && !vision.IsInSight(target))
         {
