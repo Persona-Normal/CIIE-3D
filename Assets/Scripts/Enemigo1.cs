@@ -10,6 +10,7 @@ public class Enemigo1 : MonoBehaviour
     public Quaternion angulo;
     public float grado;
     public LayerMask ground;
+    public float speed;
 
     public GameObject target;
     public bool atacando;
@@ -73,7 +74,7 @@ public class Enemigo1 : MonoBehaviour
                 ani.SetBool("walk", false);
 
                 ani.SetBool("run", true);
-                transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
                 ani.SetBool("attack", false);
             }
