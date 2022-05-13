@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -132,11 +132,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4003447337345831396, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.13623
+      value: -70.13626
       objectReference: {fileID: 0}
     - target: {fileID: 4003447337345831396, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.y
       value: -5.7078905
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003447337345831396, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1030.1125
       objectReference: {fileID: 0}
     - target: {fileID: 5453772188465271052, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_Name
@@ -148,11 +152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453772188465271055, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 578
+      value: 475.17
       objectReference: {fileID: 0}
     - target: {fileID: 5453772188465271055, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.46
+      value: 8.36
       objectReference: {fileID: 0}
     - target: {fileID: 5453772188465271055, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -188,11 +192,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6274314033976576179, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.13623
+      value: -70.13626
       objectReference: {fileID: 0}
     - target: {fileID: 6274314033976576179, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
       propertyPath: m_LocalPosition.y
       value: -5.7078905
+      objectReference: {fileID: 0}
+    - target: {fileID: 6274314033976576179, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1030.1125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7afd962652d1da149904b8af05ce97d3, type: 3}
@@ -237,8 +245,8 @@ Terrain:
   m_TerrainData: {fileID: 15600000, guid: d18d761143549954db7bcb545a620fa2, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
+  m_TreeCrossFadeLength: 66
+  m_TreeMaximumFullLODCount: 1121
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
